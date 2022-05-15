@@ -1,0 +1,165 @@
+.schedule {
+  padding: 7.5% 0px;
+}
+
+.schedule__title h1 {
+  font-size: 2.5rem !important;
+  color: var(--black);
+}
+
+.timeline {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 20px;
+}
+.outer {
+  border-left: 2px solid var(--violet);
+}
+.card {
+  position: relative;
+  margin: 0 0 20px 20px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: black;
+  border-radius: 8px;
+  max-width: 65vw;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  color: var(--black);
+  /* color: var(--pink); */
+  position: relative;
+}
+.title::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 999px;
+  left: -39px;
+  border: 3px solid var(--violet);
+}
+.schedule__title {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prize {
+  background-image: linear-gradient(to right, var(--green), var(--violet));
+  padding: 10% 0%;
+}
+
+#card-container {
+  position: relative;
+  margin: 30px;
+  width: 200px;
+  height: 200px;
+  /* z-index: 0; */
+  /* float: center; */
+  perspective: 1000px;
+}
+
+.image_holder {
+  width: 200px;
+  height: 200px;
+}
+
+#card1,
+#card2,
+#card3 {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.8s linear;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#card1:hover {
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#card2:hover {
+  transform: rotateY(-180deg);
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#card3:hover {
+  transform: rotateX(180deg);
+  box-shadow: 5px -5px 15px rgba(0, 0, 0, 0.3);
+}
+#card3 .back {
+  transform: rotateX(-180deg);
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  opacity: 0.7;
+  background: white;
+}
+
+.back > h1,
+.back > p {
+  font-family: font;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.prize_plate {
+  font-size: 1.2em;
+  padding-top: 15px;
+  color: red;
+}
+
+.date .artist {
+  font-size: 0.5em;
+}
+
+.date {
+  color: blue;
+}
+
+.front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.front > img {
+  max-width: 125px;
+}
+
+@media only screen and (max-width: 768px) {
+  .box {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
