@@ -10,7 +10,7 @@
 * {
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth!important;
+  scroll-behavior: smooth !important;
 }
 
 .nav {
@@ -28,7 +28,7 @@
 .nav__header {
   padding: 1.5rem 1.5rem;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 .nav__header > h2 {
